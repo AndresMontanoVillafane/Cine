@@ -64,12 +64,12 @@ public class DistribucionButacas implements IDistribucionButacas {
 
     @Override
     public void reservarButacas(Butaca[][] cine, int espectadores) {
-        int butacasReservadas = 0;
+        int butacasDisponibles = 0;
         int fila = 0;
         int columnaCentraldeFila = cine[0].length / 2;
-        butacasReservadas = reservaDeButacas(cine, espectadores, butacasReservadas, fila, columnaCentraldeFila);
+        butacasDisponibles = reservaDeButacas(cine, espectadores, butacasDisponibles, fila, columnaCentraldeFila);
 
-        if (butacasReservadas < espectadores) {
+        if (butacasDisponibles < espectadores) {
             System.out.println("No hay suficientes butacas disponibles");
         }
     }
